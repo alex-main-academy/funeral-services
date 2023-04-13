@@ -1,0 +1,89 @@
+.hero {
+    padding-bottom: 175px;
+
+    background-image: url(../img/section/hero/bg-hero-small.png), url(../img/section/hero/bg-hero.webp);
+    background-repeat: no-repeat;
+    background-size: auto, cover;
+    background-position: bottom right 70px, top center;
+
+    @media screen and (max-width:1200px) {
+        background-image: url(../img/section/hero/bg-hero-small-m.png), url(../img/section/hero/bg-hero-m.webp);
+        background-position: bottom center, top center;
+        padding-bottom: 312px;
+    }
+
+    @media screen and (max-width:767px) {
+        background-image: url(../img/section/hero/bg-hero-small-s.png), url(../img/section/hero/bg-hero-s.webp);
+        padding-bottom: 174px;
+    }
+
+    .container {
+        @media screen and (max-width:1200px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+.hero__title {
+    font-family: 'Merriweather';
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1.25;
+    margin-bottom: 30px;
+    margin-top: 99px;
+    max-width: 670px;
+
+    @media screen and (max-width:1200px) {
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 32px;
+        margin-top: 37px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 35px;
+        margin-bottom: 16px;
+    }
+}
+
+.hero__desc {
+    font-size: 22px;
+    line-height: 1.18;
+    margin-bottom: 60px;
+    max-width: 628px;
+
+    @media screen and (max-width:1200px) {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 16px;
+        margin-bottom: 27px;
+    }
+}
+
+.hero__button {
+    padding: 26px 102px;
+    background-color: #F4F4F4;
+    box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+
+    font-size: 25px;
+    line-height: 1.16;
+    color: var(--black-text-color);
+    cursor: pointer;
+
+    @media screen and (max-width:1200px) {
+        padding: 21.5px 63px;
+        font-size: 22px;
+    }
+
+    @media screen and (max-width:767px) {
+        padding: 14px 43.5px;
+        font-size: 18px;
+    }
+}

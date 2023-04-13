@@ -1,0 +1,570 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img,
+svg {
+  display: block;
+}
+
+button {
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+input {
+  outline: none;
+  font-family: inherit;
+}
+
+:root {
+  --primary-text-color: #F4F4F4;
+  --secondary-text-color: #252525;
+  --white-text-color: #FFFFFF;
+  --black-text-color: #000000;
+}
+
+body {
+  font-family: "Roboto";
+  color: var(--primary-text-color);
+  background-color: #F5F5F5;
+}
+
+.container {
+  max-width: 1390px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 677px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 318px;
+    padding: 0;
+  }
+}
+
+.header {
+  padding-top: 21px;
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    padding-top: 53px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding-top: 32px;
+  }
+}
+
+.header .header__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__list {
+  display: flex;
+  gap: 35px;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav__list {
+    gap: 0;
+  }
+}
+
+.nav__link {
+  font-size: 20px;
+  line-height: 1.15;
+  color: inherit;
+}
+
+@media screen and (max-width: 1360px) {
+  .nav__link {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .nav__link {
+    display: none;
+  }
+}
+
+.nav__mobile_menu {
+  background-color: transparent;
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav__mobile_menu {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav__mobile_menu {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.hero {
+  padding-bottom: 175px;
+  background-image: url(../img/section/hero/bg-hero-small.png), url(../img/section/hero/bg-hero.webp);
+  background-repeat: no-repeat;
+  background-size: auto, cover;
+  background-position: bottom right 70px, top center;
+}
+
+@media screen and (max-width: 1200px) {
+  .hero {
+    background-image: url(../img/section/hero/bg-hero-small-m.png), url(../img/section/hero/bg-hero-m.webp);
+    background-position: bottom center, top center;
+    padding-bottom: 312px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    background-image: url(../img/section/hero/bg-hero-small-s.png), url(../img/section/hero/bg-hero-s.webp);
+    padding-bottom: 174px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.hero__title {
+  font-family: "Merriweather";
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.25;
+  margin-bottom: 30px;
+  margin-top: 99px;
+  max-width: 670px;
+}
+
+@media screen and (max-width: 1200px) {
+  .hero__title {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 32px;
+    margin-top: 37px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero__title {
+    font-size: 35px;
+    margin-bottom: 16px;
+  }
+}
+
+.hero__desc {
+  font-size: 22px;
+  line-height: 1.18;
+  margin-bottom: 60px;
+  max-width: 628px;
+}
+
+@media screen and (max-width: 1200px) {
+  .hero__desc {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero__desc {
+    font-size: 16px;
+    margin-bottom: 27px;
+  }
+}
+
+.hero__button {
+  padding: 26px 102px;
+  background-color: #F4F4F4;
+  box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  font-size: 25px;
+  line-height: 1.16;
+  color: var(--black-text-color);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .hero__button {
+    padding: 21.5px 63px;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero__button {
+    padding: 14px 43.5px;
+    font-size: 18px;
+  }
+}
+
+.about {
+  color: var(--black-text-color);
+  background-image: url(../img/section/about/bg-about.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom left;
+}
+
+@media screen and (max-width: 1200px) {
+  .about {
+    background-image: url(../img/section/about/bg-about-m.png);
+    background-size: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about {
+    background-image: url(../img/section/about/bg-about-s.png);
+  }
+}
+
+.about .container {
+  padding-top: 90px;
+  padding-bottom: 140px;
+}
+
+@media screen and (max-width: 1200px) {
+  .about .container {
+    padding-top: 49px;
+    padding-bottom: 58px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about .container {
+    padding-bottom: 193px;
+  }
+}
+
+.about__title {
+  font-family: "Merriweather";
+  font-size: 60px;
+  line-height: 1.25;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 73px;
+}
+
+@media screen and (max-width: 1200px) {
+  .about__title {
+    font-size: 40px;
+    margin-bottom: 42px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about__title {
+    font-size: 35px;
+    margin-bottom: 22px;
+  }
+}
+
+.about__desc {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 670px;
+  margin-left: auto;
+  margin-bottom: 65px;
+}
+
+@media screen and (max-width: 1200px) {
+  .about__desc {
+    max-width: 359px;
+    margin-bottom: 28px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about__desc {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.about__desc_item {
+  font-size: 25px;
+  line-height: 1.16;
+}
+
+@media screen and (max-width: 1200px) {
+  .about__desc_item {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about__desc_item {
+    font-size: 16px;
+  }
+}
+
+.about__subtitle {
+  font-family: "Merriweather";
+  font-size: 40px;
+  line-height: 1.25;
+  max-width: 670px;
+  margin-left: auto;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 1200px) {
+  .about__subtitle {
+    max-width: 359px;
+    font-size: 25px;
+    margin-bottom: 44px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about__subtitle {
+    max-width: 100%;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}
+
+.about__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 670px;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .about__list {
+    max-width: 359px;
+    gap: 3px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about__list {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.about__item {
+  padding-left: 43px;
+  background-image: url(../img/icons/bullet.png);
+  background-repeat: no-repeat;
+  background-position: top 6.5px left;
+}
+
+@media screen and (max-width: 1200px) {
+  .about__item {
+    background-position: top 5px left;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about__item {
+    padding-left: 37px;
+    background-position: top left;
+  }
+}
+
+.about__item_text {
+  font-size: 25px;
+  line-height: 1.16;
+}
+
+.about__item_text span {
+  color: #242451;
+}
+
+@media screen and (max-width: 1200px) {
+  .about__item_text {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about__item_text {
+    font-size: 16px;
+  }
+}
