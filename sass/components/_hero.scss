@@ -1,19 +1,22 @@
 .hero {
     padding-bottom: 175px;
 
-    background-image: url(../img/section/hero/bg-hero-small.png), url(../img/section/hero/bg-hero.webp);
+    background-image: url(../img/section/hero/bg-hero-small.png), url(../img/section/hero/bg-hero-shadow.png), url(../img/section/hero/bg-hero.webp);
     background-repeat: no-repeat;
-    background-size: auto, cover;
-    background-position: bottom right 70px, top center;
+    background-size: auto, 1000px, cover;
+    background-position: bottom right 70px, bottom -300px right -80px, top center;
 
     @media screen and (max-width:1200px) {
-        background-image: url(../img/section/hero/bg-hero-small-m.png), url(../img/section/hero/bg-hero-m.webp);
-        background-position: bottom center, top center;
+        background-image: url(../img/section/hero/bg-hero-small-m.png), url(../img/section/hero/bg-hero-shadow.png), url(../img/section/hero/bg-hero-m.webp);
+        background-position: bottom center, bottom -160px center, top center;
+        background-size: auto, 400px, cover;
         padding-bottom: 312px;
     }
 
     @media screen and (max-width:767px) {
-        background-image: url(../img/section/hero/bg-hero-small-s.png), url(../img/section/hero/bg-hero-s.webp);
+        background-image: url(../img/section/hero/bg-hero-small-s.png), url(../img/section/hero/bg-hero-shadow.png), url(../img/section/hero/bg-hero-s.webp);
+        background-position: bottom center, bottom -50px center, top center;
+        background-size: 204px, 170px, cover;
         padding-bottom: 174px;
     }
 

@@ -1,7 +1,7 @@
 .about {
+    position: relative;
     color: var(--black-text-color);
 
-    background-image: url(../img/section/about/bg-about.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom left;
@@ -13,6 +13,7 @@
 
     @media screen and (max-width:767px) {
         background-image: url(../img/section/about/bg-about-s.png);
+        background-size: 170px;
     }
 
     .container {
@@ -30,7 +31,19 @@
     }
 }
 
+.about__background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @media screen and (max-width:1200px) {
+        display: none;
+    }
+}
+
 .about__title {
+    position: relative;
+    z-index: 1;
     font-family: 'Merriweather';
     font-size: 60px;
     line-height: 1.25;
@@ -50,6 +63,8 @@
 }
 
 .about__desc {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -82,6 +97,8 @@
 }
 
 .about__subtitle {
+    position: relative;
+    z-index: 1;
     font-family: 'Merriweather';
     font-size: 40px;
     line-height: 1.25;
@@ -103,6 +120,8 @@
 }
 
 .about__list {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -123,6 +142,7 @@
 .about__item {
     padding-left: 43px;
     background-image: url(../img/icons/bullet.png);
+    background-size: 18px;
     background-repeat: no-repeat;
     background-position: top 6.5px left;
 
@@ -142,6 +162,7 @@
 
     span {
         color: #242451;
+        font-weight: 500;
     }
 
     @media screen and (max-width:1200px) {
