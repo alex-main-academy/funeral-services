@@ -694,7 +694,7 @@ body {
   font-weight: 400;
   font-size: 25px;
   line-height: 1.16;
-  color: var(black-text-color);
+  color: var(--black-text-color);
 }
 @media screen and (max-width: 1200px) {
   .process__submit {
@@ -1747,6 +1747,7 @@ body {
   box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.25);
   border-radius: 20px;
   margin-top: 10px;
+  font-weight: 400;
   font-family: "Roboto";
   font-size: 25px;
   line-height: 1.16;
