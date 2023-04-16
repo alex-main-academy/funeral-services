@@ -1,0 +1,114 @@
+.review {
+    padding: 90px 0 188px 0;
+    background-color: #242451;
+
+    @media screen and (max-width:1200px) {
+        padding: 60px 0;
+    }
+
+    @media screen and (max-width:767px) {
+        padding: 50px 0;
+    }
+}
+
+.review__title {
+    font-family: 'Merriweather';
+    font-size: 60px;
+    line-height: 1.25;
+    color: var(--primary-text-color);
+    text-align: center;
+    margin-bottom: 54px;
+
+    @media screen and (max-width:1200px) {
+        font-size: 40px;
+        margin-bottom: 42px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 35px;
+        margin-bottom: 22px;
+    }
+}
+
+.review__list {
+    display: flex;
+    gap: 80px;
+
+    @media screen and (max-width:1200px) {
+        flex-direction: column;
+        gap: 30px;
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width:767px) {
+        width: 100%;
+        gap: 20px;
+    }
+}
+
+.review__item {
+    background-color: #F4F4F4;
+    width: calc((100% - 160px) / 3);
+    padding: 23px 17px 41px 30px;
+    border-radius: 10px;
+
+    @media screen and (max-width:1200px) {
+        width: 100%;
+    }
+
+    @media screen and (max-width:767px) {
+        padding: 28px 38px 28px 21px;
+    }
+}
+
+.review__profile {
+    display: flex;
+    gap: 37px;
+    align-items: center;
+    margin-bottom: 37px;
+
+    @media screen and (max-width:767px) {
+        gap: 43px;
+        margin-bottom: 25px;
+    }
+}
+
+.profile__image {
+    border-radius: 50%;
+
+    @media screen and (max-width:1370px) {
+        width: 80px;
+        height: 80px;
+    }
+
+    @media screen and (max-width:1200px) {
+        width: 128px;
+        height: 128px;
+    }
+
+    @media screen and (max-width:767px) {
+        width: 82px;
+        height: 82px;
+    }
+}
+
+.profile__name {
+    font-size: 30px;
+    line-height: 1.16;
+    color: var(--black-text-color);
+
+    @media screen and (max-width:767px) {
+        font-size: 25px;
+    }
+}
+
+.review__text {
+    font-size: 20px;
+    line-height: 1.15;
+    color: var(--black-text-color);
+
+    @media screen and (max-width:767px) {
+        font-size: 16px;
+    }
+}

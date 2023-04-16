@@ -41,3 +41,25 @@ calcAgreeArray.forEach((elem) => {
     });
   });
 });
+
+// scroll to top button
+const scrollTopButton = document.querySelector(".js-scroll-top");
+scrollTopButton.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+window.addEventListener("scroll", () => {
+  const scrollPosition = window.scrollY;
+
+  if (scrollPosition > 900) {
+    scrollTopButton.style.cssText = `
+      opacity: 1;
+      visibility: visible;
+    `;
+  } else {
+    scrollTopButton.style.cssText = `
+      opacity: 0;
+      visibility: hidden;
+    `;
+  }
+});
