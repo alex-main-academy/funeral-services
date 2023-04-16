@@ -51,7 +51,7 @@ scrollTopButton.addEventListener("click", () => {
 window.addEventListener("scroll", () => {
   const scrollPosition = window.scrollY;
 
-  if (scrollPosition > 900) {
+  if (scrollPosition > 800) {
     scrollTopButton.style.cssText = `
       opacity: 1;
       visibility: visible;
@@ -62,4 +62,22 @@ window.addEventListener("scroll", () => {
       visibility: hidden;
     `;
   }
+});
+
+// behavior smooth for anchors
+const anchors = document.querySelectorAll('a[href*="#"]');
+
+anchors.forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const blockID = anchor.getAttribute("href").substr(1);
+    const block = document.getElementById(blockID);
+    const blockTop = block.getBoundingClientRect().top;
+    const currentYOffset = window.pageYOffset;
+    const targetYOffset = currentYOffset + blockTop;
+    window.scrollTo({
+      top: targetYOffset,
+      behavior: "smooth",
+    });
+  });
 });

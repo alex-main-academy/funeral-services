@@ -206,7 +206,7 @@ body {
 
 .scroll__top {
   position: fixed;
-  z-index: 1000000;
+  z-index: 90;
   bottom: 50px;
   right: 50px;
   background-color: #FFFFFF;
@@ -1136,6 +1136,7 @@ body {
 
 .backdrop {
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
@@ -1614,7 +1615,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .contact {
-    background-image: url(../../img/section/contact/bg-contact-s.png);
+    background-image: url(../img/section/contact/bg-contact-s.png);
     background-size: 197px;
     padding: 50px 0 224px;
   }
