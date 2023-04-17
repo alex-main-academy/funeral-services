@@ -1,0 +1,49 @@
+.burger {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #242451;
+    z-index: 110;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition-duration: 500ms;
+
+    transform: translate(100%);
+}
+
+.burger__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.burger__item {
+    text-align: center;
+}
+
+.burger__link {
+    font-family: 'Roboto';
+    font-size: 20px;
+    line-height: 1.13;
+    color: var(--primary-text-color);
+}
+
+.burger__phone {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+}
+
+.burger__close {
+    position: absolute;
+    background-color: transparent;
+    top: 45px;
+    right: 16px;
+}

@@ -1,0 +1,43 @@
+.thanks {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 134px 66px 152px 66px;
+    background-color: #FFFFFF;
+    z-index: 100;
+
+    @media screen and (max-width:767px) {
+        padding: 50px 25px;
+    }
+}
+
+.thanks__title {
+    font-family: 'Merriweather';
+    font-size: 40px;
+    line-height: 1.25;
+    text-align: center;
+    color: #242451;
+    margin-bottom: 22px;
+
+    @media screen and (max-width:767px) {
+        font-size: 30px;
+    }
+}
+
+.thanks__text {
+    font-family: 'Merriweather';
+    font-size: 25px;
+    line-height: 1.16;
+    text-align: center;
+    color: var(--black-text-color);
+    max-width: 300px;
+
+    @media screen and (max-width:767px) {
+        font-size: 16px;
+        width: 200px;
+    }
+}

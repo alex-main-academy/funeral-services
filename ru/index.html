@@ -33,10 +33,10 @@
                                     <a class="nav__link" href="#service">Услуги</a>
                                 </li>
                                 <li class="nav__item">
-                                    <a class="nav__link" href="#useful">Как пережить потерю близких</a>
+                                    <a class="nav__link" href="#useful_1">Как пережить потерю близких</a>
                                 </li>
                                 <li class="nav__item">
-                                    <a class="nav__link" href="#useful">Как отдать почести покойному</a>
+                                    <a class="nav__link" href="#useful_2">Как отдать почести покойному</a>
                                 </li>
                                 <li class="nav__item">
                                     <a class="nav__link" href="#contact">Контакты</a>
@@ -45,7 +45,7 @@
                                     <a class="nav__link" href="tel:380960808868">096 080 88 68</a>
                                 </li>
                                 <li class="nav__item">
-                                    <button class="nav__mobile_menu">
+                                    <button class="nav__mobile_menu js-burger-open">
                                         <img src="../img/section/header/burger.svg" alt="burger" width="59" height="59">
                                     </button>
                                 </li>
@@ -56,11 +56,12 @@
             </header>
             <div class="container">
                 <h1 class="hero__title">Вы потеряли родного человека?</h1>
-                <p class="hero__desc">Мы прекрасно понимаем ваше состояние и помочь. Все ритуальные заботы мы возьмем на
+                <p class="hero__desc">Мы прекрасно понимаем ваше состояние и можем помочь. Все ритуальные заботы мы
+                    возьмем на
                     себя и поможем пережить это не простое время, пожалуйста, свяжитесь с нами и отдайте ваши заботы в
                     наши руки. Мы организуем заботу о теле покойного, а также организуем ритуал почитания покойного.
                 </p>
-                <button class="hero__button" name="contact">Связаться</button>
+                <button class="hero__button js-first-form" name="contact">Связаться</button>
             </div>
         </section>
 
@@ -99,9 +100,11 @@
             <div class="container">
                 <h2 class="process__title">Бесплатная консультация по организации ритуального процесса</h2>
                 <div class="process__content">
-                    <form class="process__form">
-                        <input class="process__input" type="text" name="name" placeholder="Ваше имя">
-                        <input class="process__input" type="phone" name="phone" placeholder="Ваш телефон">
+                    <form class="process__form" id="form_2">
+                        <input type="hidden" name="form_name" value="form_2">
+                        <input class="process__input" type="text" name="name" placeholder="Ваше имя" required>
+                        <input class="process__input" type="text" name="phone" placeholder="Ваш телефон" required
+                            minlength="8" max="15">
                         <button type="submit" class="process__submit">Связаться со мной</button>
                     </form>
                     <div>
@@ -477,10 +480,10 @@
         </section>
 
         <section class="useful">
-            <div class="container" id="useful">
+            <div class="container">
                 <h2 class="useful__title">Полезные статьи</h2>
                 <ul class="useful__list">
-                    <li class="useful__item">
+                    <li class="useful__item" id="useful_1">
                         <img src="../img/section/useful/image-1.jpg" alt="women" class="useful__image" width="626"
                             height="356">
                         <h3 class="useful__subtitle">Как пережить потерю близкого</h3>
@@ -495,7 +498,7 @@
                                     height="16"></button>
                         </div>
                     </li>
-                    <li class="useful__item">
+                    <li class="useful__item" id="useful_2">
                         <img src="../img/section/useful/image-2.jpg" alt="women" class="useful__image" width="626"
                             height="356">
                         <h3 class="useful__subtitle">Как отдать почести покойному</h3>
@@ -521,9 +524,11 @@
                         <p>Телефон для связи</p>
                         <a href="tel:0960808868">0960808868</a>
                     </div>
-                    <form class="contact__form">
-                        <input class="contact__input" type="text" name="name" placeholder="Ваше имя">
-                        <input class="contact__input" type="text" name="phone" placeholder="Ваш телефон">
+                    <form class="contact__form" id="form_4">
+                        <input type="hidden" name="form_name" value="form_4">
+                        <input class="contact__input" type="text" name="name" placeholder="Ваше имя" required>
+                        <input class="contact__input" type="text" name="phone" placeholder="Ваш телефон" required
+                            minlength="8" maxlength="15">
                         <button type="submit" class="contact__submit">Связаться со мной</button>
                     </form>
                 </div>
@@ -561,9 +566,12 @@
                                 width="128" height="128">
                             <p class="profile__name">Николай</p>
                         </div>
-                        <p class="review__text">То, что с нами произошло было, конечно, не ожидаемо. Мы были в
-                            растерянности. Не знали, что делать, за что хвататься. Один звонок все изменил. Пришел
-                            консультант, разложил нам все по полкам. Рассказал какие документы нужны.</p>
+                        <p class="review__text">В тех обстоятельствах, что мы оказались все были в шоке. Мы просто не
+                            знали, что делать. Благо есть интернет. Мы позвонили только в три компании, но сразу поняли,
+                            что только из Рустранса нам будет по дороге. Без лишних шагов. Все ясно. Цены были понятны
+                            сразу с сайта. Это очень большой плюс, потому что могут быть скрыты платежи. Здесь их нет.
+                            Все прозрачно. И главное все продумано до мелких деталей. Видим, что люди подошли к работе
+                            профессионально. Спасибо.</p>
                     </li>
                 </ul>
             </div>
@@ -587,13 +595,55 @@
         </div>
     </footer>
 
+    <div class="burger">
+        <button class="burger__close js-burger-close">
+            <img src="../img/section/header/burger.svg" alt="close" width="50" height="50">
+        </button>
+        <ul class="burger__list">
+            <li class="burger__item">
+                <a href="#about" class="burger__link">О нас</a>
+            </li>
+            <li class="burger__item">
+                <a href="#service" class="burger__link">Услуги</a>
+            </li>
+            <li class="burger__item">
+                <a href="#useful_1" class="burger__link">Как пережить потерю близких</a>
+            </li>
+            <li class="burger__item">
+                <a href="#useful_2" class="burger__link">Как отдать почести покойному</a>
+            </li>
+            <li class="burger__item">
+                <a href="#contact" class="burger__link">Контакты</a>
+            </li>
+            <li class="burger__item burger__phone">
+                <img src="../img/icons/phone.svg" alt="phone" width="26" height="26">
+                <a href="tel:380960808868" class="burger__link">096 080 88 68</a>
+            </li>
+        </ul>
+    </div>
+
     <div class="backdrop">
         <div class="modal">
             <p class="modal__title">Оставьте свои контакты и мы свяжемся с вами</p>
-            <form class="modal__form">
-                <input class="modal__input" type="text" name="name" placeholder="Ваше имя">
-                <input class="modal__input" type="text" name="phone" placeholder="Ваш телефон">
-                <button class="modal__submit" type="submit">Отправить</button>
+            <form class="modal__form" id="form_3">
+                <input type="hidden" name="form_name" value="form_3">
+                <input class="modal__input" type="text" name="name" placeholder="Ваше ім’я" required>
+                <input class="modal__input" type="text" name="phone" placeholder="Ваш телефон" required minlength="8"
+                    maxlength="15">
+                <button class="modal__submit" type="submit">Відправити</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="backdrop_2">
+        <div class="modal">
+            <p class="modal__title">Залиште свої контакти та ми зв’яжемось з вами</p>
+            <form class="modal__form" id="form_1">
+                <input type="hidden" name="form_name" value="form_1">
+                <input class="modal__input" type="text" name="name" placeholder="Ваше ім’я" required>
+                <input class="modal__input" type="text" name="phone" placeholder="Ваш телефон" required minlength="8"
+                    maxlength="15">
+                <button class="modal__submit" type="submit">Відправити</button>
             </form>
         </div>
     </div>
@@ -778,6 +828,13 @@
         </div>
     </div>
 
+    <div class="thanks js-thanks">
+        <p class="thanks__title">Благодарим!</p>
+        <p class="thanks__text">Мы получили заявку и свяжемся с вами в ближайшее время</p>
+    </div>
+
+    <script defer src="../js/burger.js"></script>
+    <script defer src="../js/forms.js"></script>
     <script defer src="../js/main.js"></script>
     <script defer src="../js/modal.js"></script>
     <script defer src="../js/article.js"></script>

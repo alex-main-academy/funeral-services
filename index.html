@@ -32,10 +32,10 @@
                                     <a class="nav__link" href="#service">Послуги</a>
                                 </li>
                                 <li class="nav__item">
-                                    <a class="nav__link" href="#useful">Як пережити втрату близьких</a>
+                                    <a class="nav__link" href="#useful_1">Як пережити втрату близьких</a>
                                 </li>
                                 <li class="nav__item">
-                                    <a class="nav__link" href="#useful">Як віддати почесті покійному</a>
+                                    <a class="nav__link" href="#useful_2">Як віддати почесті покійному</a>
                                 </li>
                                 <li class="nav__item">
                                     <a class="nav__link" href="#contact">Контакти</a>
@@ -44,7 +44,7 @@
                                     <a class="nav__link" href="tel:380960808868">096 080 88 68</a>
                                 </li>
                                 <li class="nav__item">
-                                    <button class="nav__mobile_menu">
+                                    <button class="nav__mobile_menu js-burger-open">
                                         <img src="img/section/header/burger.svg" alt="burger" width="59" height="59">
                                     </button>
                                 </li>
@@ -55,11 +55,12 @@
             </header>
             <div class="container">
                 <h1 class="hero__title">Ви втратили рідну людину?</h1>
-                <p class="hero__desc">Ми чудово розуміємо ваш стан і допомогти. Всі ритуальні турботи ми візьмемо на
+                <p class="hero__desc">Ми чудово розуміємо ваш стан і можемо допомогти. Всі ритуальні турботи ми візьмемо
+                    на
                     себе і допоможемо пережити цей не простий час, будь ласка, зв'яжіться з нами і віддайте ваші турботи
                     в наші руки. Ми організуємо турботу про тіло покійного, а також організуємо ритуал шани покійного.
                 </p>
-                <button class="hero__button" name="contact">Зв’язатись</button>
+                <button class="hero__button js-first-form" name="contact">Зв’язатись</button>
             </div>
         </section>
 
@@ -100,9 +101,11 @@
             <div class="container">
                 <h2 class="process__title">Безкоштовна консультація щодо організації ритуального процесу</h2>
                 <div class="process__content">
-                    <form class="process__form">
-                        <input class="process__input" type="text" name="name" placeholder="Ваше ім’я">
-                        <input class="process__input" type="phone" name="phone" placeholder="Ваш телефон">
+                    <form class="process__form" id="form_2">
+                        <input type="hidden" name="form_name" value="form_2">
+                        <input class="process__input" type="text" name="name" placeholder="Ваше ім’я" required>
+                        <input class="process__input" type="text" name="phone" placeholder="Ваш телефон" required
+                            minlength="8" max="15">
                         <button type="submit" class="process__submit">Зв'язатися зі мною</button>
                     </form>
                     <div>
@@ -171,7 +174,7 @@
                                 <ul class="calc__list">
                                     <li class="calc__item">
                                         <input class="calc__agree" type="checkbox">
-                                        <p class="calc__name">Підготовчий єтап прозвон родичів</p>
+                                        <p class="calc__name">Підготовчий етап прозвон родичів</p>
                                         <p class="calc__money" style="display: none;">0</p>
                                     </li>
                                     <li class="calc__item">
@@ -478,10 +481,10 @@
         </section>
 
         <section class="useful">
-            <div class="container" id="useful">
+            <div class="container">
                 <h2 class="useful__title">Корисні статті</h2>
                 <ul class="useful__list">
-                    <li class="useful__item">
+                    <li class="useful__item" id="useful_1">
                         <img src="img/section/useful/image-1.jpg" alt="women" class="useful__image" width="626"
                             height="356">
                         <h3 class="useful__subtitle">Як пережити втрату близького</h3>
@@ -496,7 +499,7 @@
                                     alt="arrow" class="useful__arrow" width="81" height="16"></button>
                         </div>
                     </li>
-                    <li class="useful__item">
+                    <li class="useful__item" id="useful_2">
                         <img src="img/section/useful/image-2.jpg" alt="women" class="useful__image" width="626"
                             height="356">
                         <h3 class="useful__subtitle">Як віддати почесті покійному</h3>
@@ -524,9 +527,11 @@
                         <p>Телефон для зв'язку</p>
                         <a href="tel:0960808868">0960808868</a>
                     </div>
-                    <form class="contact__form">
-                        <input class="contact__input" type="text" name="name" placeholder="Ваше ім'я">
-                        <input class="contact__input" type="text" name="phone" placeholder="Ваш телефон">
+                    <form class="contact__form" id="form_4">
+                        <input type="hidden" name="form_name" value="form_4">
+                        <input class="contact__input" type="text" name="name" placeholder="Ваше ім'я" required>
+                        <input class="contact__input" type="text" name="phone" placeholder="Ваш телефон" required
+                            minlength="8" maxlength="15">
                         <button type="submit" class="contact__submit">Зв'язатися зі мною</button>
                     </form>
                 </div>
@@ -563,9 +568,12 @@
                                 width="128" height="128">
                             <p class="profile__name">Миколай</p>
                         </div>
-                        <p class="review__text">Те що з нами сталося було звісно не очікувано. Ми були розгублені. Не
-                            знали що робити, за що хапатися. Один дзвінок все змінив. Прийшов консультант, розклав нам
-                            все по полицях. Розповів які документи потрібні.</p>
+                        <p class="review__text">В тих обставинах що ми опинилися всі були в шоці. Ми просто не знали що
+                            робити. Благо є інтернет. Ми подзвонили тільки в три компанії, але одразу зрозуміли, що
+                            тільки з Рустранс нам буде по дорозі. Без зайвих кроків. Все чітко. Ціни зрозумілі були
+                            зразу з сайту. Це дуже великий плюс, бо можуть бути скриті платежі. Тут їх немає. Все
+                            прозоро. І головне все продумано до мілких деталей. Бачимо що люди підійшли до роботи
+                            професійно. Дякую.</p>
                     </li>
                 </ul>
             </div>
@@ -589,12 +597,54 @@
         </div>
     </footer>
 
+    <div class="burger">
+        <button class="burger__close js-burger-close">
+            <img src="img/section/header/burger.svg" alt="close" width="50" height="50">
+        </button>
+        <ul class="burger__list">
+            <li class="burger__item">
+                <a href="#about" class="burger__link">Про нас</a>
+            </li>
+            <li class="burger__item">
+                <a href="#service" class="burger__link">Послуги</a>
+            </li>
+            <li class="burger__item">
+                <a href="#useful_1" class="burger__link">Як пережити втрату близьких</a>
+            </li>
+            <li class="burger__item">
+                <a href="#useful_2" class="burger__link">Як віддати почесті покійному</a>
+            </li>
+            <li class="burger__item">
+                <a href="#contact" class="burger__link">Контакти</a>
+            </li>
+            <li class="burger__item burger__phone">
+                <img src="img/icons/phone.svg" alt="phone" width="26" height="26">
+                <a href="tel:380960808868" class="burger__link">096 080 88 68</a>
+            </li>
+        </ul>
+    </div>
+
     <div class="backdrop">
         <div class="modal">
             <p class="modal__title">Залиште свої контакти та ми зв’яжемось з вами</p>
-            <form class="modal__form">
-                <input class="modal__input" type="text" name="name" placeholder="Ваше ім’я">
-                <input class="modal__input" type="text" name="phone" placeholder="Ваш телефон">
+            <form class="modal__form" id="form_3">
+                <input type="hidden" name="form_name" value="form_3">
+                <input class="modal__input" type="text" name="name" placeholder="Ваше ім’я" required>
+                <input class="modal__input" type="text" name="phone" placeholder="Ваш телефон" required minlength="8"
+                    maxlength="15">
+                <button class="modal__submit" type="submit">Відправити</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="backdrop_2">
+        <div class="modal">
+            <p class="modal__title">Залиште свої контакти та ми зв’яжемось з вами</p>
+            <form class="modal__form" id="form_1">
+                <input type="hidden" name="form_name" value="form_1">
+                <input class="modal__input" type="text" name="name" placeholder="Ваше ім’я" required>
+                <input class="modal__input" type="text" name="phone" placeholder="Ваш телефон" required minlength="8"
+                    maxlength="15">
                 <button class="modal__submit" type="submit">Відправити</button>
             </form>
         </div>
@@ -786,6 +836,13 @@
         </div>
     </div>
 
+    <div class="thanks js-thanks">
+        <p class="thanks__title">Дякуємо!</p>
+        <p class="thanks__text">Ми отримали заявку та зв’яжемось з вами найближчим часом</p>
+    </div>
+
+    <script defer src="js/burger.js"></script>
+    <script defer src="js/forms.js"></script>
     <script defer src="js/main.js"></script>
     <script defer src="js/modal.js"></script>
     <script defer src="js/article.js"></script>
