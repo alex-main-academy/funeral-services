@@ -44,12 +44,21 @@ calcAgreeArray.forEach((elem) => {
 
 // scroll to top button
 const scrollTopButton = document.querySelector(".js-scroll-top");
+const header = document.querySelector(".header");
 scrollTopButton.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 window.addEventListener("scroll", () => {
   const scrollPosition = window.scrollY;
+
+  if (scrollPosition > 10 && window.innerWidth < 1201) {
+    header.style.paddingTop = "10px";
+    header.style.backgroundColor = "#242451";
+  } else {
+    header.style.paddingTop = "32px";
+    header.style.backgroundColor = "transparent";
+  }
 
   if (scrollPosition > 800) {
     scrollTopButton.style.cssText = `
