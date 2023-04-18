@@ -11,10 +11,7 @@ formsArray.forEach((elem) => {
     if (event.target.getAttribute("id") !== "form_3") {
       const formData = new FormData(elem);
       const xhr = new XMLHttpRequest();
-      xhr.open(
-        "POST",
-        "https://hook.eu1.make.com/x61dagvagnmxnkf2x5fmmppkasko3opk"
-      );
+      xhr.open("POST", "https://eobgliqi2rif85f.m.pipedream.net");
       xhr.send(formData);
     }
 
@@ -43,10 +40,7 @@ formsArray.forEach((elem) => {
       }
 
       const xhr = new XMLHttpRequest();
-      xhr.open(
-        "POST",
-        "https://hook.eu1.make.com/x61dagvagnmxnkf2x5fmmppkasko3opk"
-      );
+      xhr.open("POST", "https://eobgliqi2rif85f.m.pipedream.net");
       xhr.send(formData);
     }
 
@@ -64,6 +58,15 @@ formsArray.forEach((elem) => {
     document.body.style.overflow = "auto";
 
     // окно с благодарностью
+    const thanksClose = document.querySelector(".js-thanks-close");
+
+    thanksClose.addEventListener("click", () => {
+      thanksBlock.style.cssText = `
+        opacity: 0;
+        visibility: hidden;
+      `;
+    });
+
     thanksBlock.style.cssText = `
       opacity: 1;
       visibility: visible;
@@ -74,7 +77,7 @@ formsArray.forEach((elem) => {
         opacity: 0;
         visibility: hidden;
       `;
-    }, 2000);
+    }, 4000);
 
     event.target.elements.name.value = "";
     event.target.elements.phone.value = "";

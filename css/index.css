@@ -1702,7 +1702,7 @@ body {
 }
 .contact__phone a {
   font-family: "Roboto";
-  font-size: 25px;
+  font-size: 30px;
   line-height: 1.16;
   color: #242451;
 }
@@ -1722,6 +1722,7 @@ body {
 }
 
 .contact__form {
+  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -1734,7 +1735,7 @@ body {
 
 .contact__input {
   padding: 15px 45px;
-  background-color: transparent;
+  background-color: #f4f4f4;
   border: 1px solid #242451;
   border-radius: 10px;
   font-family: "Roboto";
@@ -2061,11 +2062,20 @@ body {
   padding: 134px 66px 152px 66px;
   background-color: #FFFFFF;
   z-index: 100;
+  transition-duration: 300ms;
 }
 @media screen and (max-width: 767px) {
   .thanks {
     padding: 50px 25px;
   }
+}
+
+.thanks__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .thanks__title {

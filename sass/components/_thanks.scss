@@ -9,10 +9,19 @@
     padding: 134px 66px 152px 66px;
     background-color: #FFFFFF;
     z-index: 100;
+    transition-duration: 300ms;
 
     @media screen and (max-width:767px) {
         padding: 50px 25px;
     }
+}
+
+.thanks__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .thanks__title {

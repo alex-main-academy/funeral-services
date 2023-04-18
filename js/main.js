@@ -55,7 +55,7 @@ window.addEventListener("scroll", () => {
   if (scrollPosition > 10 && window.innerWidth < 1201) {
     header.style.paddingTop = "10px";
     header.style.backgroundColor = "#242451";
-  } else {
+  } else if (scrollPosition < 10 && window.innerWidth < 1201) {
     header.style.paddingTop = "32px";
     header.style.backgroundColor = "transparent";
   }
