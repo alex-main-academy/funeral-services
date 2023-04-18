@@ -362,7 +362,8 @@ body {
 @media screen and (max-width: 767px) {
   .hero__title {
     font-size: 35px;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
+    margin-top: 146px;
   }
 }
 
@@ -381,7 +382,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .hero__desc {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 27px;
   }
 }
@@ -512,7 +513,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .about__desc_item {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -578,7 +579,7 @@ body {
 @media screen and (max-width: 767px) {
   .about__item {
     padding-left: 37px;
-    background-position: top left;
+    background-position: top 2px left;
   }
 }
 
@@ -597,7 +598,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .about__item_text {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -785,7 +786,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .process__text {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -801,6 +802,14 @@ body {
 @media screen and (max-width: 767px) {
   .service {
     padding: 50px 0;
+  }
+  .service .container {
+    max-width: 350px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .service .container {
+    max-width: 318px;
   }
 }
 
@@ -893,8 +902,13 @@ body {
 }
 @media screen and (max-width: 767px) {
   .service__button .service__subtitle {
-    font-size: 20px;
+    font-size: 22px;
     margin-left: 20px;
+    max-width: 223px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .service__button .service__subtitle {
     max-width: 196px;
   }
 }
@@ -1117,7 +1131,7 @@ body {
 @media screen and (max-width: 767px) {
   .calc__name {
     margin-left: 30px;
-    font-size: 16px;
+    font-size: 18px;
     width: calc(100% - 25px);
   }
 }
@@ -1325,7 +1339,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .useful__subtitle {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
@@ -1356,7 +1370,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .useful__desc {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -1702,7 +1716,7 @@ body {
 }
 .contact__phone a {
   font-family: "Roboto";
-  font-size: 30px;
+  font-size: 25px;
   line-height: 1.16;
   color: #242451;
 }
@@ -1713,11 +1727,11 @@ body {
 }
 @media screen and (max-width: 767px) {
   .contact__phone p {
-    font-size: 25px;
+    font-size: 27px;
     margin-bottom: 10px;
   }
   .contact__phone a {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
@@ -1987,10 +2001,10 @@ body {
     margin-bottom: 25px;
   }
   .footer__contact p {
-    font-size: 25px;
+    font-size: 27px;
   }
   .footer__contact a {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
@@ -2066,7 +2080,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .thanks {
-    padding: 50px 25px;
+    padding: 60px 25px;
   }
 }
 
@@ -2076,6 +2090,16 @@ body {
   right: 20px;
   background-color: transparent;
   cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .thanks__close {
+    top: 10px;
+    right: 10px;
+  }
+  .thanks__close img {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .thanks__title {

@@ -11,14 +11,21 @@ formsArray.forEach((elem) => {
     if (event.target.getAttribute("id") !== "form_3") {
       const formData = new FormData(elem);
       const xhr = new XMLHttpRequest();
-      xhr.open("POST", "https://eobgliqi2rif85f.m.pipedream.net");
+      xhr.open(
+        "POST",
+        "https://hook.eu1.make.com/x61dagvagnmxnkf2x5fmmppkasko3opk"
+      );
       xhr.send(formData);
     }
 
     // отправка данных с формы где калькулятор
     if (event.target.getAttribute("id") === "form_3") {
-      const formSum = document.querySelector(".js-service-sum").textContent;
-      const checkboxesArray = document.querySelectorAll("input[type=checkbox]");
+      const formSum = document.querySelector(
+        ".active .js-service-sum"
+      ).textContent;
+      const checkboxesArray = document.querySelectorAll(
+        ".active input[type=checkbox]"
+      );
       const checkedCheckboxesArray = [];
 
       checkboxesArray.forEach((elem) => {
@@ -40,7 +47,10 @@ formsArray.forEach((elem) => {
       }
 
       const xhr = new XMLHttpRequest();
-      xhr.open("POST", "https://eobgliqi2rif85f.m.pipedream.net");
+      xhr.open(
+        "POST",
+        "https://hook.eu1.make.com/x61dagvagnmxnkf2x5fmmppkasko3opk"
+      );
       xhr.send(formData);
     }
 

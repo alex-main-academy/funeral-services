@@ -8,6 +8,16 @@
 
     @media screen and (max-width:767px) {
         padding: 50px 0;
+
+        .container {
+            max-width: 350px;
+        }
+    }
+
+    @media screen and (max-width:350px) {
+        .container {
+            max-width: 318px;
+        }
     }
 }
 
@@ -96,8 +106,12 @@
         }
 
         @media screen and (max-width:767px) {
-            font-size: 20px;
+            font-size: 22px;
             margin-left: 20px;
+            max-width: 223px;
+        }
+
+        @media screen and (max-width:350px) {
             max-width: 196px;
         }
     }
@@ -324,7 +338,7 @@
 
     @media screen and (max-width:767px) {
         margin-left: 30px;
-        font-size: 16px;
+        font-size: 18px;
         width: calc(100% - 25px);
     }
 }

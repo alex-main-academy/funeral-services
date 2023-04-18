@@ -1,47 +1,3 @@
-const serviceButtonArray = document.querySelectorAll(".service__button");
-
-serviceButtonArray.forEach((elem) => {
-  elem.addEventListener("click", () => {
-    serviceButtonArray.forEach((elem) => {
-      elem.classList.remove("active");
-    });
-
-    elem.classList.add("active");
-  });
-});
-
-// calculator
-const totalSumArray = document.querySelectorAll(".js-service-sum");
-const calcAgreeArray = document.querySelectorAll(".calc__agree");
-let allSumArray = [];
-let sum = 0;
-
-calcAgreeArray.forEach((elem) => {
-  elem.addEventListener("click", () => {
-    if (elem.checked) {
-      allSumArray.push(
-        elem.nextSibling.nextSibling.nextSibling.nextSibling.childNodes[0]
-          .textContent
-      );
-    } else {
-      const idx = allSumArray.indexOf(
-        elem.nextSibling.nextSibling.nextSibling.nextSibling.childNodes[0]
-          .textContent
-      );
-      allSumArray.splice(idx, 1);
-    }
-
-    sum = 0;
-    allSumArray.forEach((elem) => {
-      sum += Number(elem);
-    });
-
-    totalSumArray.forEach((elem) => {
-      elem.textContent = sum;
-    });
-  });
-});
-
 // scroll to top button
 const scrollTopButton = document.querySelector(".js-scroll-top");
 const header = document.querySelector(".header");
@@ -89,4 +45,123 @@ anchors.forEach((anchor) => {
       behavior: "smooth",
     });
   });
+});
+
+// новый калькулятор для каждого отдеально
+const serviceButtonArray = document.querySelectorAll(".service__button");
+
+serviceButtonArray.forEach((elem) => {
+  elem.addEventListener("click", () => {
+    serviceButtonArray.forEach((elem) => {
+      elem.classList.remove("active");
+    });
+
+    elem.classList.add("active");
+  });
+});
+
+const firstCalculator = document.querySelector(".js-calc-1");
+const secondCalculator = document.querySelector(".js-calc-2");
+const thirdCalculator = document.querySelector(".js-calc-3");
+const fourthCalculator = document.querySelector(".js-calc-4");
+const fifthCalculator = document.querySelector(".js-calc-5");
+
+firstCalculator.addEventListener("click", () => {
+  const checkedInput = document.querySelectorAll(".js-calc-1 input:checked");
+  const sumElement = document.querySelector(".js-calc-1 .js-service-sum");
+  const totalSumArray = [];
+  let sum = 0;
+
+  checkedInput.forEach((elem) => {
+    totalSumArray.push(
+      elem.nextSibling.nextSibling.nextSibling.nextSibling.childNodes[0]
+        .textContent
+    );
+  });
+
+  totalSumArray.forEach((elem) => {
+    sum += Number(elem);
+  });
+
+  sumElement.textContent = sum;
+});
+
+secondCalculator.addEventListener("click", () => {
+  const checkedInput = document.querySelectorAll(".js-calc-2 input:checked");
+  const sumElement = document.querySelector(".js-calc-2 .js-service-sum");
+  const totalSumArray = [];
+  let sum = 0;
+
+  checkedInput.forEach((elem) => {
+    totalSumArray.push(
+      elem.nextSibling.nextSibling.nextSibling.nextSibling.childNodes[0]
+        .textContent
+    );
+  });
+
+  totalSumArray.forEach((elem) => {
+    sum += Number(elem);
+  });
+
+  sumElement.textContent = sum;
+});
+
+thirdCalculator.addEventListener("click", () => {
+  const checkedInput = document.querySelectorAll(".js-calc-3 input:checked");
+  const sumElement = document.querySelector(".js-calc-3 .js-service-sum");
+  const totalSumArray = [];
+  let sum = 0;
+
+  checkedInput.forEach((elem) => {
+    totalSumArray.push(
+      elem.nextSibling.nextSibling.nextSibling.nextSibling.childNodes[0]
+        .textContent
+    );
+  });
+
+  totalSumArray.forEach((elem) => {
+    sum += Number(elem);
+  });
+
+  sumElement.textContent = sum;
+});
+
+fourthCalculator.addEventListener("click", () => {
+  const checkedInput = document.querySelectorAll(".js-calc-4 input:checked");
+  const sumElement = document.querySelector(".js-calc-4 .js-service-sum");
+  const totalSumArray = [];
+  let sum = 0;
+
+  checkedInput.forEach((elem) => {
+    totalSumArray.push(
+      elem.nextSibling.nextSibling.nextSibling.nextSibling.childNodes[0]
+        .textContent
+    );
+  });
+
+  totalSumArray.forEach((elem) => {
+    sum += Number(elem);
+  });
+
+  sumElement.textContent = sum;
+});
+
+fifthCalculator.addEventListener("click", () => {
+  const checkedInput = document.querySelectorAll(".js-calc-5 input:checked");
+  const sumElement = document.querySelector(".js-calc-5 .js-service-sum");
+  const totalSumArray = [];
+  let sum = 0;
+
+  checkedInput.forEach((elem) => {
+    totalSumArray.push(
+      elem.nextSibling.nextSibling.nextSibling.nextSibling.childNodes[0]
+        .textContent
+    );
+  });
+
+  totalSumArray.forEach((elem) => {
+    sum += Number(elem);
+  });
+
+  sumElement.textContent = sum;
 });
